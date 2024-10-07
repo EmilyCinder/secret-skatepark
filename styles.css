@@ -9,11 +9,58 @@ body, html {
 }
 
 #map {
-    width: 90vw; /* Takes up 90% of the viewport width */
-    height: 80vh; /* Takes up 80% of the viewport height */
-    max-width: 1200px; /* Limits the max width to 1200px for large screens */
+    width: 90vw;
+    height: 80vh;
+    max-width: 1000px;
     border-radius: 15px;
     box-shadow: 0 8px 30px rgba(255, 20, 147, 0.5);
     border: 4px solid #FF1493;
     overflow: hidden;
+}
+
+/* Popup styling */
+.popup {
+    background: #FFFFFF;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 90vw;
+    word-wrap: break-word;
+}
+
+.popup img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+.popup strong {
+    font-size: 16px;
+}
+
+.popup p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    #map {
+        width: 95vw;
+        height: 75vh;
+    }
+
+    .popup {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .popup strong {
+        font-size: 14px;
+    }
+
+    .popup p {
+        font-size: 12px;
+    }
 }
