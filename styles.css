@@ -4,13 +4,32 @@ body, html {
     background: linear-gradient(135deg, #FFC0CB, #FF69B4);
     font-family: 'Comic Sans MS', cursive, sans-serif;
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Stack content vertically */
     align-items: center;
+    justify-content: flex-start; /* Align content at the top */
+    padding-top: 20px; /* Add space at the top */
+}
+
+.title-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 24px;
+    color: #000; /* Black color for the title */
+    margin: 10px 0;
+}
+
+.title-icon {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 10px;
 }
 
 #map {
     width: 90vw;
-    height: 80vh;
+    height: 70vh; /* Reduced height to fit better with the title */
     max-width: 1000px;
     border-radius: 15px;
     box-shadow: 0 8px 30px rgba(255, 20, 147, 0.5);
@@ -48,7 +67,7 @@ body, html {
 @media (max-width: 768px) {
     #map {
         width: 95vw;
-        height: 75vh;
+        height: 60vh; /* Adjusted height for smaller screens */
     }
 
     .popup {
@@ -62,5 +81,13 @@ body, html {
 
     .popup p {
         font-size: 12px;
+    }
+
+    .title {
+        font-size: 18px; /* Adjust title size for mobile */
+    }
+
+    .title-icon {
+        width: 40px; /* Smaller SVG size for mobile */
     }
 }
